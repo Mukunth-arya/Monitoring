@@ -1,0 +1,14 @@
+---
+version: "3"
+volumes:
+  Data:
+    driver: local
+services:
+  Data:
+    image: grafana/grafana
+    ports:
+    - 3000:3000
+    container_name: mycontainer
+    volumes:
+    - Data:/home/data
+...  

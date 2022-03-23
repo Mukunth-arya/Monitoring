@@ -1,0 +1,13 @@
+---
+version: "3"
+services:
+  mydata:
+    image: prom/prometheus
+    ports:
+    - 9090:9090
+    container_name: mydata
+    command:
+    - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+    - /home/mukunth/compose/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+...   
